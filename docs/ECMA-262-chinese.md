@@ -165,14 +165,14 @@ ECMA-262 第12至15版 项目编辑
 Kevin Gibbons  
 ECMA-262 第12至15版 项目编辑
 
-## Scope 范围
+## 1 Scope 范围
 <font style="color:rgb(17, 17, 17);">This Standard defines the ECMAScript 2025 general-purpose programming language.</font>
 
 <font style="color:rgb(17, 17, 17);">本标准定义了ECMAScript 2025通用编程语言。</font>
 
 <font style="color:rgb(17, 17, 17);"></font>
 
-## <font style="color:rgb(17, 17, 17);">Conformance 符合性</font>
+## <font style="color:rgb(17, 17, 17);">2 Conformance 符合性</font>
 <font style="color:rgb(17, 17, 17);">A conforming implementation of ECMAScript must provide and support all the types, values, objects, properties, functions, and program syntax and semantics described in this specification.</font>
 
 一个符合标准的ECMAScript实现必须提供并支持本规范中描述的所有类型、值、对象、属性、函数以及程序语法和语义。
@@ -256,7 +256,7 @@ Example clause contents.
 <font style="color:rgb(17, 17, 17);">示例条款内容。</font>  
 
 
-## <font style="color:rgb(17, 17, 17);">Normative References </font>规范参考
+## <font style="color:rgb(17, 17, 17);">3 Normative References </font>规范参考
 <font style="color:rgb(17, 17, 17);">The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</font>
 
 [<font style="color:rgb(32, 108, 167);">IEEE 754-2019</font>](https://tc39.es/ecma262/#sec-bibliography)<font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">IEEE Standard for Floating-Point Arithmetic</font><font style="color:rgb(17, 17, 17);">.</font>
@@ -285,7 +285,7 @@ Example clause contents.
 
 <font style="color:rgb(17, 17, 17);"></font>
 
-## <font style="color:rgb(17, 17, 17);">Overview 概述</font>
+## <font style="color:rgb(17, 17, 17);">4 Overview 概述</font>
 <font style="color:rgb(17, 17, 17);">This section contains a non-normative overview of the ECMAScript language.</font>
 
 本节包含了ECMAScript语言的非规范性概述。
@@ -314,7 +314,7 @@ ECMAScript 最初被设计为一种网页脚本语言，提供了一种在浏览
 
 ECMAScript 的使用已经超越了简单的脚本编写，现在它被广泛应用于各种不同环境和规模的全方位编程任务中。随着 ECMAScript 应用范围的扩大，其提供的特性和功能也日益丰富。如今，ECMAScript 已经成为一种功能齐全的通用编程语言。
 
-### <font style="color:rgb(17, 17, 17);">Web Scripting 网页脚本</font>
+### <font style="color:rgb(17, 17, 17);">4.1 Web Scripting 网页脚本</font>
 <font style="color:rgb(17, 17, 17);">A web browser provides an ECMAScript </font>[<font style="color:rgb(32, 108, 167);">host environment</font>](https://tc39.es/ecma262/#host-environment)<font style="color:rgb(17, 17, 17);"> for client-side computation including, for instance, objects that represent windows, menus, pop-ups, dialog boxes, text areas, anchors, frames, history, cookies, and input/output. Further, the </font>[<font style="color:rgb(32, 108, 167);">host environment</font>](https://tc39.es/ecma262/#host-environment)<font style="color:rgb(17, 17, 17);"> provides a means to attach scripting code to events such as change of focus, page and image loading, unloading, error and abort, selection, form submission, and mouse actions. Scripting code appears within the HTML and the displayed page is a combination of user interface elements and fixed and computed text and images. The scripting code is reactive to user interaction, and there is no need for a main program.</font>
 
 网页浏览器为客户端计算提供了一个ECMAScript宿主环境，其中包括表示窗口、菜单、弹出框、对话框、文本区域、锚点、框架、历史记录、cookie以及输入/输出的对象。此外，宿主环境还提供了一种方式，可以将脚本代码附加到诸如焦点变化、页面和图像加载、卸载、错误和中止、选择、表单提交以及鼠标动作等事件上。脚本代码会出现在HTML中，显示的页面是用户界面元素与固定和计算出的文本及图像的组合。脚本代码能够响应用户的交互，并且不需要一个主程序。
@@ -331,7 +331,7 @@ ECMAScript 的使用已经超越了简单的脚本编写，现在它被广泛应
 
 每个支持ECMAScript的Web浏览器和服务器都提供了自己的宿主环境，从而完成了ECMAScript的执行环境。
 
-### <font style="color:rgb(17, 17, 17);">Hosts and Implementations </font>宿主与实现
+### <font style="color:rgb(17, 17, 17);">4.2 Hosts and Implementations </font>宿主与实现
 To aid integrating ECMAScript into [host environments](https://tc39.es/ecma262/#host-environment), this specification defers the definition of certain facilities (e.g., [abstract operations](https://tc39.es/ecma262/#sec-algorithm-conventions-abstract-operations)), either in whole or in part, to a source outside of this specification. Editorially, this specification distinguishes the following kinds of deferrals.
 
 为了帮助将ECMAScript集成到宿主环境中，本规范将某些设施（例如，抽象操作）的定义全部或部分地推迟到本规范之外的来源进行定义。从编辑的角度来看，本规范区分了以下几种推迟方式。
@@ -396,7 +396,7 @@ Both [hosts](https://tc39.es/ecma262/#host) and implementations may interface wi
 
 <font style="color:rgb(17, 17, 17);"></font>
 
-### <font style="color:rgb(17, 17, 17);">ECMAScript Overview ECMAScript概述</font>
+### <font style="color:rgb(17, 17, 17);">4.3 ECMAScript Overview ECMAScript概述</font>
 The following is an informal overview of ECMAScript—not all parts of the language are described. This overview is not part of the standard proper.
 
 以下是非正式的ECMAScript概览——并非语言的所有部分都得到了描述。此概览并不属于标准文档本身。
@@ -431,7 +431,7 @@ ECMAScript syntax intentionally resembles Java syntax. ECMAScript syntax is rela
 
 ECMAScript的语法有意地类似于Java的语法。ECMAScript的语法则更为宽松，使其能够作为一种易于使用的脚本语言。例如，变量不需要声明其类型，属性也不需要关联类型，并且定义的函数在被调用前不需要先进行文本上的声明。
 
-#### <font style="color:rgb(17, 17, 17);">Objects 对象</font>
+#### <font style="color:#DF2A3F;">4.3.1 Objects</font><font style="color:rgb(17, 17, 17);"> 对象</font>
 Even though ECMAScript includes syntax for class definitions, ECMAScript objects are not fundamentally class-based such as those in C++, Smalltalk, or Java. Instead objects may be created in various ways including via a literal notation or via [constructors](https://tc39.es/ecma262/#constructor) which create objects and then execute code that initializes all or part of them by assigning initial values to their properties. Each [constructor](https://tc39.es/ecma262/#constructor) is a function that has a property named "prototype" that is used to implement prototype-based inheritance and shared properties. Objects are created by using [constructors](https://tc39.es/ecma262/#constructor) in new expressions; for example, `new Date(2009, 11)` creates a new Date object. Invoking a [constructor](https://tc39.es/ecma262/#constructor) without using new has consequences that depend on the [constructor](https://tc39.es/ecma262/#constructor). For example, `Date()` produces a string representation of the current date and time rather than an object.
 
 尽管ECMAScript包含类定义的语法，但ECMAScript对象本质上并不是基于类的，不像C++、Smalltalk或Java中的那些对象。相反，可以通过多种方式创建对象，包括使用字面量表示法或通过构造函数来创建对象，这些构造函数创建对象后会执行代码，通过给它们的属性赋初始值来初始化全部或部分对象。每个构造函数都是一个具有名为“prototype”的属性的函数，这个属性用于实现基于原型的继承和共享属性。对象是通过在new表达式中使用构造函数创建的；例如，new Date(2009, 11) 创建一个新的Date对象。如果不使用new调用构造函数，则结果取决于具体的构造函数。例如，Date() 会产生当前日期和时间的字符串表示形式，而不是一个对象。
@@ -455,20 +455,105 @@ In a class-based object-oriented language, in general, state is carried by insta
 
 All objects that do not directly contain a particular property that their prototype contains share that property and its value. Figure 1 illustrates this:
 
-**<font style="color:rgb(17, 17, 17);">CF</font>**<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">is a</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">(and also an object). Five objects have been created by using</font><font style="color:rgb(17, 17, 17);"> </font>`**<font style="color:rgb(17, 17, 17);">new</font>**`<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">expressions:</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">1</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">2</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">3</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">4</font>**</sub><font style="color:rgb(17, 17, 17);">, and</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">5</font>**</sub><font style="color:rgb(17, 17, 17);">. Each of these objects contains properties named</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">"q1"</font>**<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">and</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">"q2"</font>**<font style="color:rgb(17, 17, 17);">. The dashed lines represent the implicit prototype relationship; so, for example,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">3</font>**</sub><font style="color:rgb(17, 17, 17);">'s prototype is</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);">. The</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<font style="color:rgb(17, 17, 17);">, has two properties itself, named</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">"P1"</font>**<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">and</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">"P2"</font>**<font style="color:rgb(17, 17, 17);">, which are not visible to</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">1</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">2</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">3</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">4</font>**</sub><font style="color:rgb(17, 17, 17);">, or</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">5</font>**</sub><font style="color:rgb(17, 17, 17);">. The property named</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">"CFP1"</font>**<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">in</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">is shared by</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">1</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">2</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">3</font>**</sub><font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">4</font>**</sub><font style="color:rgb(17, 17, 17);">, and</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">5</font>**</sub><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">(but not by</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<font style="color:rgb(17, 17, 17);">), as are any properties found in</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);">'s implicit prototype chain that are not named</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">"q1"</font>**<font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">"q2"</font>**<font style="color:rgb(17, 17, 17);">, or</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">"CFP1"</font>**<font style="color:rgb(17, 17, 17);">. Notice that there is no implicit prototype link between</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">and</font><font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);">.</font>
+**<font style="color:rgb(17, 17, 17);">CF</font>**<font style="color:rgb(17, 17, 17);"> is a </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="color:rgb(17, 17, 17);"> (and also an object). Five objects have been created by using </font>`**<font style="color:rgb(17, 17, 17);">new</font>**`<font style="color:rgb(17, 17, 17);"> expressions: </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">1</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">2</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">3</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">4</font>**</sub><font style="color:rgb(17, 17, 17);">, and </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">5</font>**</sub><font style="color:rgb(17, 17, 17);">. Each of these objects contains properties named </font>**<font style="color:rgb(17, 17, 17);">"q1"</font>**<font style="color:rgb(17, 17, 17);"> and </font>**<font style="color:rgb(17, 17, 17);">"q2"</font>**<font style="color:rgb(17, 17, 17);">. The dashed lines represent the implicit prototype relationship; so, for example, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">3</font>**</sub><font style="color:rgb(17, 17, 17);">'s prototype is </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);">. The </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<font style="color:rgb(17, 17, 17);">, has two properties itself, named </font>**<font style="color:rgb(17, 17, 17);">"P1"</font>**<font style="color:rgb(17, 17, 17);"> and </font>**<font style="color:rgb(17, 17, 17);">"P2"</font>**<font style="color:rgb(17, 17, 17);">, which are not visible to </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">1</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">2</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">3</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">4</font>**</sub><font style="color:rgb(17, 17, 17);">, or </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">5</font>**</sub><font style="color:rgb(17, 17, 17);">. The property named </font>**<font style="color:rgb(17, 17, 17);">"CFP1"</font>**<font style="color:rgb(17, 17, 17);"> in </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);"> is shared by </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">1</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">2</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">3</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">4</font>**</sub><font style="color:rgb(17, 17, 17);">, and </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">5</font>**</sub><font style="color:rgb(17, 17, 17);"> (but not by </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<font style="color:rgb(17, 17, 17);">), as are any properties found in </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);">'s implicit prototype chain that are not named </font>**<font style="color:rgb(17, 17, 17);">"q1"</font>**<font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">"q2"</font>**<font style="color:rgb(17, 17, 17);">, or </font>**<font style="color:rgb(17, 17, 17);">"CFP1"</font>**<font style="color:rgb(17, 17, 17);">. Notice that there is no implicit prototype link between </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<font style="color:rgb(17, 17, 17);"> and </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);">.</font>
 
-所有不直接包含其原型中特定属性的对象都会共享该属性及其值。图1说明了这一点：  
-CF是一个构造函数（同时也是一个对象）。通过使用new表达式创建了五个对象：cf1、cf2、cf3、cf4和cf5。每个这些对象都包含名为"q1"和"q2"的属性。虚线表示隐式的原型关系；例如，cf3的原型是CFp。构造函数CF本身有两个属性，名为"P1"和"P2"，这些属性对CFp、cf1、cf2、cf3、cf4或cf5不可见。CFp中的名为"CFP1"的属性被cf1、cf2、cf3、cf4和cf5共享（但不被CF共享），同样地，任何在CFp的隐式原型链中找到的且不名为"q1"、"q2"或"CFP1"的属性也是如此。请注意，CF与CFp之间没有隐式的原型链接。
+所有不直接包含其原型中特定属性的对象都会共享原型中该特定属性及其值。图1说明了这一点：  
+CF是一个构造函数（同时也是一个对象）。通过使用new表达式创建了五个对象：cf<sub>1</sub>、cf<sub>2</sub>、cf<sub>3</sub>、cf<sub>4</sub>和cf<sub>5</sub>。每个这些对象都包含名为"q1"和"q2"的属性。虚线表示隐式的原型关系；例如，cf<sub>3</sub>的原型是CF<sub>p</sub>。构造函数CF本身有两个属性，名为"P1"和"P2"，这些属性对CF<sub>p</sub>、cf<sub>1</sub>、cf<sub>2</sub>、cf<sub>3</sub>、cf<sub>4</sub>或cf<sub>5</sub>不可见。CF<sub>p</sub>中的名为"CFP1"的属性被cf<sub>1</sub>、cf<sub>2</sub>、cf<sub>3</sub>、cf<sub>4</sub>和cf<sub>5</sub>共享（但不被CF共享），同样地，任何在CF<sub>p</sub>的隐式原型链中找到的且不名为"q1"、"q2"或"CFP1"的属性也是如此。请注意，CF与CF<sub>p</sub>之间没有隐式的原型链接。
 
 
 
 Unlike most class-based object languages, properties can be added to objects dynamically by assigning values to them. That is, [constructors](https://tc39.es/ecma262/#constructor) are not required to name or assign values to all or any of the constructed object's properties. In the above diagram, one could add a new shared property for<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">1</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">2</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">3</font>**</sub><font style="color:rgb(17, 17, 17);">, </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">4</font>**</sub>, and<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">cf</font>**<sub>**<font style="color:rgb(17, 17, 17);">5</font>**</sub><font style="color:rgb(17, 17, 17);"> </font>by assigning a new value to the property in<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">CF</font>**<sub>**<font style="color:rgb(17, 17, 17);">p</font>**</sub><font style="color:rgb(17, 17, 17);">.</font>
 
-与大多数基于类的对象语言不同，可以通过给对象赋值来动态地向对象添加属性。也就是说，构造函数不需要命名或为所构建对象的所有或任何属性赋值。在上面的图示中，可以通过在CFp中为该属性赋新值来为cf1、cf2、cf3、cf4和cf5添加一个新的共享属性。
+与大多数基于类的对象语言不同，可以通过给对象赋值来动态地向对象添加属性。也就是说，构造函数不需要命名或为所构建对象的所有或任何属性赋值。在上面的图示中，可以通过在CF<sub>p</sub>中为该属性赋新值来为cf<sub>1</sub>、cf<sub>2</sub>、cf<sub>3</sub>、cf<sub>4</sub>和cf<sub>5</sub>添加一个新的共享属性。
 
 
 
 Although ECMAScript objects are not inherently class-based, it is often convenient to define class-like abstractions based upon a common pattern of [constructor](https://tc39.es/ecma262/#constructor) functions, prototype objects, and methods. The ECMAScript built-in objects themselves follow such a class-like pattern. Beginning with ECMAScript 2015, the ECMAScript language includes syntactic class definitions that permit programmers to concisely define objects that conform to the same class-like abstraction pattern used by the built-in objects.
 
 尽管ECMAScript对象本质上不是基于类的，但通常根据构造函数、原型对象和方法的通用模式来定义类似类的抽象会很方便。ECMAScript内置对象本身也遵循这种类似类的模式。从ECMAScript 2015开始，ECMAScript语言包含了语法上的类定义，允许程序员简洁地定义符合内置对象所使用的相同类似抽象模式的对象。
+
+
+
+#### <font style="color:rgb(17, 17, 17);">4.3.2 The Strict Variant of ECMAScript ECMAScript的严格变体(严格模式)</font>
+<font style="color:rgb(17, 17, 17);">The ECMAScript Language recognizes the possibility that some users of the language may wish to restrict their usage of some features available in the language. They might do so in the interests of security, to avoid what they consider to be error-prone features, to get enhanced error checking, or for other reasons of their choosing. In support of this possibility, ECMAScript defines a strict variant of the language. The strict variant of the language excludes some specific syntactic and semantic features of the regular ECMAScript language and modifies the detailed semantics of some features. The strict variant also specifies additional error conditions that must be reported by throwing error exceptions in situations that are not specified as errors by the non-strict form of the language.</font>
+
+ECMAScript语言认识到，有些用户可能希望限制他们对语言中某些特性的使用。他们可能会出于安全考虑、避免他们认为容易出错的特性、获得增强的错误检查，或其他自选的原因而这样做。为了支持这种可能性，ECMAScript 定义了该语言的一种严格变体。严格变体排除了常规 ECMAScript 语言中的某些特定语法和语义特性，并修改了一些特性的详细语义。严格变体还规定了额外的错误条件，在非严格形式的语言未指定为错误的情况下，必须通过抛出错误异常来报告这些情况。
+
+
+
+<font style="color:rgb(17, 17, 17);">The strict variant of ECMAScript is commonly referred to as the</font><font style="color:rgb(17, 17, 17);"> </font>_<font style="color:rgb(17, 17, 17);">strict mode</font>_<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">of the language. Strict mode selection and use of the strict mode syntax and semantics of ECMAScript is explicitly made at the level of individual</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">ECMAScript source text</font>](https://tc39.es/ecma262/#sec-source-text)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">units as described in</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">11.2.2</font>](https://tc39.es/ecma262/#sec-strict-mode-code)<font style="color:rgb(17, 17, 17);">. Because strict mode is selected at the level of a syntactic source text unit, strict mode only imposes restrictions that have local effect within such a source text unit. Strict mode does not restrict or modify any aspect of the ECMAScript semantics that must operate consistently across multiple source text units. A complete ECMAScript program may be composed of both strict mode and non-strict mode</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">ECMAScript source text</font>](https://tc39.es/ecma262/#sec-source-text)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">units. In this case, strict mode only applies when actually executing code that is defined within a strict mode source text unit.</font>
+
+ECMAScript的严格变体通常被称为该语言的严格模式。严格模式的选择以及对 ECMAScript 严格模式语法和语义的使用，是在单个 ECMAScript 源文本单元的级别上明确指定的，如 11.2.2 节所述。由于严格模式是在语法源文本单元级别选择的，因此严格模式仅施加在该源文本单元内具有局部效果的限制。严格模式不会限制或修改必须跨多个源文本单元一致运行的 ECMAScript 语义的任何方面。一个完整的 ECMAScript 程序可以由严格模式和非严格模式的 ECMAScript 源文本单元组成。在这种情况下，严格模式仅在实际执行严格模式源文本单元中定义的代码时适用。
+
+
+
+<font style="color:rgb(17, 17, 17);">In order to conform to this specification, an ECMAScript implementation must implement both the full unrestricted ECMAScript language and the strict variant of the ECMAScript language as defined by this specification. In addition, an implementation must support the combination of unrestricted and strict mode source text units into a single composite program.</font>
+
+为了符合本规范，ECMAScript实现必须同时实现本规范所定义的完整的无限制ECMAScript语言及其严格变体。此外，实现还必须支持将无限制模式和严格模式的源文本单元组合成一个单一的复合程序。
+
+
+
+### 4.4 <font style="color:rgb(17, 17, 17);">Terms and Definitions 术语及定义</font>
+<font style="color:rgb(17, 17, 17);">For the purposes of this document, the following terms and definitions apply.</font>
+
+本文档中使用以下术语和定义。
+
+#### 4.4.1 <font style="color:rgb(17, 17, 17);">implementation-approximated 近似实现</font>
+<font style="color:rgb(17, 17, 17);">an </font>[<font style="color:rgb(32, 108, 167);">implementation-approximated</font>](https://tc39.es/ecma262/#implementation-approximated)<font style="color:rgb(17, 17, 17);"> facility is defined in whole or in part by an external source but has a recommended, ideal behaviour in this specification</font>
+
+一种通过近似实现的功能，是指其全部或部分由外部来源定义，但在本规范中有推荐的理想行为。
+
+#### 4.4.2 <font style="color:rgb(17, 17, 17);">implementation-defined 定义实现</font>
+<font style="color:rgb(17, 17, 17);">an </font>[<font style="color:rgb(32, 108, 167);">implementation-defined</font>](https://tc39.es/ecma262/#implementation-defined)<font style="color:rgb(17, 17, 17);"> facility is defined in whole or in part by an external source to this specification</font>
+
+由本规范之外的来源全部或部分定义的一种实现定义的设施。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.3 host-defined</font>
+<font style="color:rgb(17, 17, 17);">same as </font>[<font style="color:rgb(32, 108, 167);">implementation-defined</font>](https://tc39.es/ecma262/#implementation-defined)
+
+<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note: Editorially, see clause </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">4.2</font>](https://tc39.es/ecma262/#sec-hosts-and-implementations)<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">.</font>
+
+与实现定义相同  
+注：编辑上，请参见第4.2条。
+
+#### 4.4.4 type
+<font style="color:rgb(17, 17, 17);">set of data values as defined in clause </font>[<font style="color:rgb(32, 108, 167);">6</font>](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
+
+#### <font style="color:rgb(17, 17, 17);">4.4.5 primitive value 原始值</font>
+<font style="color:rgb(17, 17, 17);">member of one of the types Undefined, Null, Boolean, Number, BigInt, Symbol, or String as defined in clause </font>[<font style="color:rgb(32, 108, 167);">6</font>](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
+
+<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note: A primitive value is a datum that is represented directly at the lowest level of the language implementation.</font>
+
+成员属于以下类型之一：Undefined、Null、布尔值(Boolean)、数字(Number)、BigInt、符号(Symbol)或字符串(String)，这些类型在第6条中定义。
+
+> 注：原始值是在语言实现的最低级别直接表示的数据。
+>
+
+#### 4.4.6 <font style="color:rgb(17, 17, 17);">object 对象</font>
+<font style="color:rgb(17, 17, 17);">member of the type Object</font>
+
+<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note: An object is a collection of properties and has a single prototype object. The prototype may be null.</font>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.7 constructor 构造函数</font>
+[<font style="color:rgb(32, 108, 167);">function object</font>](https://tc39.es/ecma262/#function-object)<font style="color:rgb(17, 17, 17);"> that creates and initializes objects</font>
+
+<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note: The value of a </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">'s "prototype" property is a prototype object that is used to implement inheritance and shared properties.</font><font style="color:rgb(17, 17, 17);"></font>
+
+函数对象，用于创建和初始化对象
+
+> 注意：构造函数的“prototype”属性的值是一个原型对象，用于实现继承和共享属性。
+>
+
+#### 4.4.8 <font style="color:rgb(17, 17, 17);">prototype 原型</font>
+<font style="color:rgb(17, 17, 17);">object that provides shared properties for other objects</font>
+
+<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note: When a </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);"> creates an object, that object implicitly references the </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">'s "prototype" property for the purpose of resolving property references. The </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">'s "prototype" property can be referenced by the program expression </font>`<font style="color:rgb(33, 131, 121);background-color:rgb(233, 251, 233);">constructor</font><font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">.prototype</font>`<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">, and properties added to an object's prototype are shared, through inheritance, by all objects sharing the prototype. Alternatively, a new object may be created with an explicitly specified prototype by using the </font>`<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Object.create</font>`<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);"> built-in function.</font>
+
+提供给其他对象共享属性的对象
+
+> 注释：当构造函数创建一个对象时，该对象会隐式地引用构造函数的“原型”属性来解析属性引用。可以通过程序表达式 `constructor.prototype` 来引用构造函数的“原型”属性，并且添加到对象原型中的属性将通过继承被所有共享该原型的对象所共享。或者，也可以使用 `Object.create` 内置函数以显式指定原型的方式创建新对象。
+>
+
+<font style="color:rgb(17, 17, 17);"></font>
+
 
