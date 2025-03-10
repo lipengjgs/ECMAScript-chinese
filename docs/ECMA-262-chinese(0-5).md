@@ -31,7 +31,7 @@ ECMA-262草案/2025-02-27
 
 有关此文档创建方式的更多信息，请参阅版权页。
 
-## Introduction 介绍
+## 介绍 Introduction
 <font style="color:rgb(17, 17, 17);">This Ecma Standard defines the ECMAScript 2025 Language. It is the sixteenth edition of the ECMAScript Language Specification. Since publication of the first edition in 1997, ECMAScript has grown to be one of the world's most widely used general-purpose programming languages. It is best known as the language embedded in web browsers but has also been widely adopted for server and embedded applications.</font>
 
 这份Ecma标准定义了ECMAScript 2025语言。它是ECMAScript语言规范的第十六版。自1997年第一版发布以来，ECMAScript已经成为世界上最广泛使用的通用编程语言之一。它最广为人知的身份是作为嵌入在网页浏览器中的语言，与此同时也被广泛应用于服务器和嵌入式应用中。
@@ -151,7 +151,7 @@ ECMA-262, Project Editor, 12th through 15th Editions
 Kevin Gibbons  
 ECMA-262, Project Editor, 12th through 15th Editions
 
-数十名来自许多组织的个人为Ecma TC39中的这一版及以前版本的发展做出了非常重要的贡献。此外，一个支持TC39的ECMAScript工作的并且充满活力的社区已经形成。这个社区审查了无数草案，提交了数千份错误报告，进行了实现试验，贡献了测试套件，并向全球开发者社区普及了关于ECMAScript的知识。遗憾的是，没法在这里列出并感谢每一位为此付出努力的人和组织。  
+数十名来自许多组织的个人为Ecma TC39中的这一版及以前版本的发展做出了非常重要的贡献。此外，一个支持TC39的ECMAScript工作的并且充满活力的社区已经形成。这个社区审查了无数草案，提交了数千份错误报告，进行了实现试验，贡献了测试套件，并向全球开发者社区普及了关于ECMAScript的知识。遗憾的是，无法在这里列出并感谢每一位为此付出努力的人和组织。  
 Allen Wirfs-Brock  
 ECMA-262 第6版 项目编辑  
 Brian Terlson  
@@ -165,14 +165,14 @@ ECMA-262 第12至15版 项目编辑
 Kevin Gibbons  
 ECMA-262 第12至15版 项目编辑
 
-## 1 Scope 范围
+## 1 范围 Scope
 <font style="color:rgb(17, 17, 17);">This Standard defines the ECMAScript 2025 general-purpose programming language.</font>
 
 <font style="color:rgb(17, 17, 17);">本标准定义了ECMAScript 2025通用编程语言。</font>
 
 <font style="color:rgb(17, 17, 17);"></font>
 
-## <font style="color:rgb(17, 17, 17);">2 Conformance 符合性</font>
+## <font style="color:rgb(17, 17, 17);">2 符合性 Conformance</font>
 <font style="color:rgb(17, 17, 17);">A conforming implementation of ECMAScript must provide and support all the types, values, objects, properties, functions, and program syntax and semantics described in this specification.</font>
 
 一个符合标准的ECMAScript实现必须提供并支持本规范中描述的所有类型、值、对象、属性、函数以及程序语法和语义。
@@ -256,7 +256,7 @@ Example clause contents.
 <font style="color:rgb(17, 17, 17);">示例条款内容。</font>  
 
 
-## <font style="color:rgb(17, 17, 17);">3 Normative References </font>规范参考
+## <font style="color:rgb(17, 17, 17);">3 规范参考 Normative References</font>
 <font style="color:rgb(17, 17, 17);">The following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</font>
 
 [<font style="color:rgb(32, 108, 167);">IEEE 754-2019</font>](https://tc39.es/ecma262/#sec-bibliography)<font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">IEEE Standard for Floating-Point Arithmetic</font><font style="color:rgb(17, 17, 17);">.</font>
@@ -285,7 +285,7 @@ Example clause contents.
 
 <font style="color:rgb(17, 17, 17);"></font>
 
-## <font style="color:rgb(17, 17, 17);">4 Overview 概述</font>
+## <font style="color:rgb(17, 17, 17);">4 概述 Overview</font>
 <font style="color:rgb(17, 17, 17);">This section contains a non-normative overview of the ECMAScript language.</font>
 
 本节包含了ECMAScript语言的非规范性概述。
@@ -472,8 +472,6 @@ Although ECMAScript objects are not inherently class-based, it is often convenie
 
 尽管ECMAScript对象本质上不是基于类的，但通常根据构造函数、原型对象和方法的通用模式来定义类似类的抽象会很方便。ECMAScript内置对象本身也遵循这种类似类的模式。从ECMAScript 2015开始，ECMAScript语言包含了语法上的类定义，允许程序员简洁地定义符合内置对象所使用的相同类似抽象模式的对象。
 
-
-
 #### <font style="color:rgb(17, 17, 17);">4.3.2 The Strict Variant of ECMAScript ECMAScript的严格变体(严格模式)</font>
 <font style="color:rgb(17, 17, 17);">The ECMAScript Language recognizes the possibility that some users of the language may wish to restrict their usage of some features available in the language. They might do so in the interests of security, to avoid what they consider to be error-prone features, to get enhanced error checking, or for other reasons of their choosing. In support of this possibility, ECMAScript defines a strict variant of the language. The strict variant of the language excludes some specific syntactic and semantic features of the regular ECMAScript language and modifies the detailed semantics of some features. The strict variant also specifies additional error conditions that must be reported by throwing error exceptions in situations that are not specified as errors by the non-strict form of the language.</font>
 
@@ -513,8 +511,10 @@ ECMAScript的严格变体通常被称为该语言的严格模式。严格模式�
 
 <font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note: Editorially, see clause </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">4.2</font>](https://tc39.es/ecma262/#sec-hosts-and-implementations)<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">.</font>
 
-与实现定义相同  
-注：编辑上，请参见第4.2条。
+与实现定义相同
+
+> 注：编辑上，请参见第4.2条。
+>
 
 #### 4.4.4 type
 <font style="color:rgb(17, 17, 17);">set of data values as defined in clause </font>[<font style="color:rgb(32, 108, 167);">6</font>](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
@@ -541,7 +541,7 @@ ECMAScript的严格变体通常被称为该语言的严格模式。严格模式�
 
 函数对象，用于创建和初始化对象
 
-> 注意：构造函数的“prototype”属性的值是一个原型对象，用于实现继承和共享属性。
+> 注：构造函数的“prototype”属性的值是一个原型对象，用于实现继承和共享属性。
 >
 
 #### 4.4.8 <font style="color:rgb(17, 17, 17);">prototype 原型</font>
@@ -551,8 +551,441 @@ ECMAScript的严格变体通常被称为该语言的严格模式。严格模式�
 
 提供给其他对象共享属性的对象
 
-> 注释：当构造函数创建一个对象时，该对象会隐式地引用构造函数的“原型”属性来解析属性引用。可以通过程序表达式 `constructor.prototype` 来引用构造函数的“原型”属性，并且添加到对象原型中的属性将通过继承被所有共享该原型的对象所共享。或者，也可以使用 `Object.create` 内置函数以显式指定原型的方式创建新对象。
+> 注：当构造函数创建一个对象时，该对象会隐式地引用构造函数的“原型”属性来解析属性引用。可以通过程序表达式 `constructor.prototype` 来引用构造函数的“原型”属性，并且添加到对象原型中的属性将通过继承被所有共享该原型的对象所共享。或者，也可以使用 `Object.create` 内置函数以显式指定原型的方式创建新对象。
 >
+
+#### <font style="color:rgb(17, 17, 17);">4.4.9 ordinary object 普通对象</font>
+<font style="color:rgb(17, 17, 17);">object that has the default behaviour for the essential internal methods that must be supported by all objects</font>
+
+具有所有对象必须支持的基本内部方法的默认行为的对象。
+
+#### 4.4.10 <font style="color:rgb(17, 17, 17);">exotic object 异质对象/特殊对象</font>
+<font style="color:rgb(17, 17, 17);">object that does not have the default behaviour for one or more of the essential internal methods</font>
+
+<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note: Any object that is not an </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">ordinary object</font>](https://tc39.es/ecma262/#ordinary-object)<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);"> is an </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">exotic object</font>](https://tc39.es/ecma262/#exotic-object)<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">.</font>
+
+对象的一个或多个关键内部方法不具备默认行为。
+
+> 注：任何不是普通对象的对象都称为特殊对象。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.11 standard object 标准对象</font>
+<font style="color:rgb(17, 17, 17);">object whose semantics are defined by this specification</font>
+
+该对象的语义由本规范定义。
+
+#### 4.4.12 <font style="color:rgb(17, 17, 17);">built-in object 内置对象</font>
+<font style="color:rgb(17, 17, 17);">object specified and supplied by an ECMAScript implementation</font>
+
+<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note: Standard built-in objects are defined in this specification. An ECMAScript implementation may specify and supply additional kinds of built-in objects.</font>
+
+由ECMAScript实现指定和提供的对象
+
+> 注：标准内置对象在本规范中定义。ECMAScript实现可以指定并提供其他种类的内置对象。
+>
+
+#### 4.4.13 <font style="color:rgb(17, 17, 17);">undefined value 值undefined</font>
+<font style="color:rgb(17, 17, 17);">primitive value used when a variable has not been assigned a value</font>
+
+当变量未被赋值时使用的原始值。
+
+#### 4.4.14 <font style="color:rgb(17, 17, 17);">Undefined type Undefined类型</font>
+<font style="color:rgb(17, 17, 17);">type whose sole value is the </font>**<font style="color:rgb(17, 17, 17);">undefined</font>**<font style="color:rgb(17, 17, 17);"> value</font>
+
+类型，其唯一值是**undefined**（这样的类型用来表示一个变量已经被声明但尚未被赋值的状态）
+
+#### <font style="color:rgb(17, 17, 17);">4.4.15 null value 值null</font>
+<font style="color:rgb(17, 17, 17);">primitive value that represents the intentional absence of any object value</font>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.16 Null type Null类型</font>
+<font style="color:rgb(17, 17, 17);">type whose sole value is the </font>**<font style="color:rgb(17, 17, 17);">null</font>**<font style="color:rgb(17, 17, 17);"> value</font>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.17 Boolean value 布尔值</font>
+<font style="color:rgb(17, 17, 17);">member of the </font>[<font style="color:rgb(32, 108, 167);">Boolean type</font>](https://tc39.es/ecma262/#sec-ecmascript-language-types-boolean-type)
+
+<font style="background-color:rgb(233, 251, 233);">Note: There are only two Boolean values, </font>**<font style="background-color:rgb(233, 251, 233);">true</font>**<font style="background-color:rgb(233, 251, 233);"> and </font>**<font style="background-color:rgb(233, 251, 233);">false</font>**<font style="background-color:rgb(233, 251, 233);">.</font>
+
+布尔类型的成员
+
+> 注：只有两个布尔值成员，**true**和**false**
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.18 Boolean type 布尔类型</font>
+<font style="color:rgb(17, 17, 17);">type consisting of the primitive values </font>**<font style="color:rgb(17, 17, 17);">true</font>**<font style="color:rgb(17, 17, 17);"> and </font>**<font style="color:rgb(17, 17, 17);">false</font>**
+
+类型由基本值 true 和 false 组成。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.19 Boolean object 布尔对象</font>
+<font style="color:rgb(17, 17, 17);">member of the </font>[<font style="color:rgb(32, 108, 167);">Object type</font>](https://tc39.es/ecma262/#sec-object-type)<font style="color:rgb(17, 17, 17);"> that is an instance of the standard built-in Boolean </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)
+
+<font style="background-color:rgb(233, 251, 233);">Note: A Boolean object is created by using the Boolean </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="background-color:rgb(233, 251, 233);"> in a </font>`new`<font style="background-color:rgb(233, 251, 233);"> expression, supplying a Boolean value as an argument. The resulting object has an internal slot whose value is the Boolean value. A Boolean object can be coerced to a Boolean value.</font>
+
+属于Object类型并且是标准内置Boolean构造函数的实例
+
+> 注：通过在`new`表达式中使用Boolean构造函数并提供一个布尔值作为参数来创建Boolean对象。生成的对象具有一个内部槽，其值为该布尔值。Boolean对象可以被强制转换为布尔值。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.20 String value</font>
+<font style="color:rgb(17, 17, 17);">primitive value that is a </font>[<font style="color:rgb(32, 108, 167);">finite</font>](https://tc39.es/ecma262/#finite)<font style="color:rgb(17, 17, 17);"> ordered sequence of zero or more 16-bit unsigned </font>[<font style="color:rgb(32, 108, 167);">integer</font>](https://tc39.es/ecma262/#integer)<font style="color:rgb(17, 17, 17);"> values</font>
+
+<font style="background-color:rgb(233, 251, 233);">Note: A String value is a member of the </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">String type</font>](https://tc39.es/ecma262/#sec-ecmascript-language-types-string-type)<font style="background-color:rgb(233, 251, 233);">. Each </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">integer</font>](https://tc39.es/ecma262/#integer)<font style="background-color:rgb(233, 251, 233);"> value in the sequence usually represents a single 16-bit unit of UTF-16 text. However, ECMAScript does not place any restrictions or requirements on the values except that they must be 16-bit unsigned </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">integers</font>](https://tc39.es/ecma262/#integer)<font style="background-color:rgb(233, 251, 233);">.</font>
+
+这是一个基本值，表示由零个或多个16位无符号整数组成的有限有序序列。
+
+> 注：字符串值是字符串类型的一个成员。序列中的每个整数值通常代表UTF-16文本的一个16位单元。然而，ECMAScript对这些值没有任何限制或要求，除了它们必须是16位无符号整数。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.21 String type</font>
+<font style="color:rgb(17, 17, 17);">set of all possible String values</font>
+
+所有可能的字符串值的集合
+
+#### <font style="color:rgb(17, 17, 17);">4.4.22 String object</font>
+<font style="color:rgb(17, 17, 17);">member of the </font>[<font style="color:rgb(32, 108, 167);">Object type</font>](https://tc39.es/ecma262/#sec-object-type)<font style="color:rgb(17, 17, 17);"> that is an instance of the standard built-in String </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)
+
+<font style="background-color:rgb(233, 251, 233);">Note: A String object is created by using the String </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="background-color:rgb(233, 251, 233);"> in a </font>`new`<font style="background-color:rgb(233, 251, 233);"> expression, supplying a String value as an argument. The resulting object has an internal slot whose value is the String value. A String object can be coerced to a String value by calling the String </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="background-color:rgb(233, 251, 233);"> as a function (</font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">22.1.1.1</font>](https://tc39.es/ecma262/#sec-string-constructor-string-value)<font style="background-color:rgb(233, 251, 233);">).</font>
+
+对象类型的一个成员，它是标准内置的String构造函数的实例。
+
+> 注：通过在new表达式中使用String构造函数并提供一个字符串值作为参数来创建String对象。生成的对象有一个内部槽位，其值为该字符串值。可以通过将String构造函数作为函数调用来将String对象强制转换为字符串值（22.1.1.1）。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.23 Number value</font>
+<font style="color:rgb(17, 17, 17);">primitive value corresponding to a double-precision 64-bit binary format </font>[<font style="color:rgb(32, 108, 167);">IEEE 754-2019</font>](https://tc39.es/ecma262/#sec-bibliography)<font style="color:rgb(17, 17, 17);"> value</font>
+
+<font style="background-color:rgb(233, 251, 233);">Note: A Number value is a member of the </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">Number type</font>](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type)<font style="background-color:rgb(233, 251, 233);"> and is a direct representation of a number.</font>
+
+与双精度64位二进制格式IEEE 754-2019值相对应的原始值  
+注：Number值是Number类型的一个成员，是数字的直接表示。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.24 Number type</font>
+<font style="color:rgb(17, 17, 17);">set of all possible Number values including </font>**<font style="color:rgb(17, 17, 17);">NaN</font>**<font style="color:rgb(17, 17, 17);"> (“not a number”), </font>**<font style="color:rgb(17, 17, 17);">+∞</font>**<sub><font style="color:rgb(17, 17, 17);">𝔽</font></sub><font style="color:rgb(17, 17, 17);"> (positive infinity), and </font>**<font style="color:rgb(17, 17, 17);">-∞</font>**<sub><font style="color:rgb(17, 17, 17);">𝔽</font></sub><font style="color:rgb(17, 17, 17);"> (negative infinity)</font>
+
+所有可能的数字值的集合，包括NaN（“非数字”）、+∞𝔽（正无穷大）和-∞𝔽（负无穷大）。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.25 Number object</font>
+<font style="color:rgb(17, 17, 17);">member of the </font>[<font style="color:rgb(32, 108, 167);">Object type</font>](https://tc39.es/ecma262/#sec-object-type)<font style="color:rgb(17, 17, 17);"> that is an instance of the standard built-in Number </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)
+
+<font style="background-color:rgb(233, 251, 233);">Note: A Number object is created by using the Number </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="background-color:rgb(233, 251, 233);"> in a </font>`new`<font style="background-color:rgb(233, 251, 233);"> expression, supplying a Number value as an argument. The resulting object has an internal slot whose value is the Number value. A Number object can be coerced to a Number value by calling the Number </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructor</font>](https://tc39.es/ecma262/#constructor)<font style="background-color:rgb(233, 251, 233);"> as a function (</font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">21.1.1.1</font>](https://tc39.es/ecma262/#sec-number-constructor-number-value)<font style="background-color:rgb(233, 251, 233);">).</font>
+
+属于Object类型的一个成员，它是标准内置Number构造函数的实例。
+
+> 注：通过在new表达式中使用Number构造函数并提供一个数字值作为参数来创建Number对象。生成的对象有一个内部槽位，其值为该数字值。可以通过将Number构造函数作为函数调用来将Number对象强制转换为数字值（21.1.1.1）。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.26 Infinity</font>
+<font style="color:rgb(17, 17, 17);">Number value that is the positive infinite Number value</font>
+
+数值，表示正无穷大的数值。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.27 NaN</font>
+<font style="color:rgb(17, 17, 17);">Number value that is an </font>[<font style="color:rgb(32, 108, 167);">IEEE 754-2019</font>](https://tc39.es/ecma262/#sec-bibliography)<font style="color:rgb(17, 17, 17);"> NaN (“not a number”) value</font>
+
+数值是符合IEEE 754-2019标准的NaN（“非数字”）值。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.28 BigInt value</font>
+<font style="color:rgb(17, 17, 17);">primitive value corresponding to an arbitrary-precision </font>[<font style="color:rgb(32, 108, 167);">integer</font>](https://tc39.es/ecma262/#integer)<font style="color:rgb(17, 17, 17);"> value</font>
+
+与任意精度整数值相对应的原始值
+
+#### <font style="color:rgb(17, 17, 17);">4.4.29 BigInt type</font>
+<font style="color:rgb(17, 17, 17);">set of all possible BigInt values</font>
+
+所有可能的BigInt值的集合
+
+#### <font style="color:rgb(17, 17, 17);">4.4.30 BigInt object</font>
+<font style="color:rgb(17, 17, 17);">member of the </font>[<font style="color:rgb(32, 108, 167);">Object type</font>](https://tc39.es/ecma262/#sec-object-type)<font style="color:rgb(17, 17, 17);"> that is an instance of the standard built-in BigInt </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)
+
+标准内置 BigInt 构造函数的实例，属于 Object 类型的成员。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.31 Symbol value</font>
+<font style="color:rgb(17, 17, 17);">primitive value that represents a unique, non-String Object </font>[<font style="color:rgb(32, 108, 167);">property key</font>](https://tc39.es/ecma262/#property-key)
+
+表示唯一且非字符串的对象属性键的原始值。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.32 Symbol type</font>
+<font style="color:rgb(17, 17, 17);">set of all possible Symbol values</font>
+
+所有可能的符号值的集合
+
+#### <font style="color:rgb(17, 17, 17);">4.4.33 Symbol object</font>
+<font style="color:rgb(17, 17, 17);">member of the </font>[<font style="color:rgb(32, 108, 167);">Object type</font>](https://tc39.es/ecma262/#sec-object-type)<font style="color:rgb(17, 17, 17);"> that is an instance of the standard built-in Symbol </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)
+
+标准内置Symbol构造函数的实例的对象类型成员  
+译注：这里的意思是指某个对象是通过JavaScript中的标准内置`Symbol()`构造函数创建出来的实例。在JavaScript中，`Symbol`是一种原始数据类型，用于生成唯一的标识符。当你使用`Symbol()`构造函数时，它会返回一个新的、独一无二的`Symbol`值。如果一个对象是由这个构造函数产生的，那么这个对象就可以被描述为"标准内置Symbol构造函数的实例"。不过，需要注意的是，直接由`Symbol`构造函数创建的结果实际上是一个`symbol`类型的值，而不是一个对象；但可以通过`Object()`将其转换成对象形式。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.34 function</font>
+<font style="color:rgb(17, 17, 17);">member of the </font>[<font style="color:rgb(32, 108, 167);">Object type</font>](https://tc39.es/ecma262/#sec-object-type)<font style="color:rgb(17, 17, 17);"> that may be invoked as a subroutine</font>
+
+<font style="background-color:rgb(233, 251, 233);">Note: In addition to its properties, a function contains executable code and state that determine how it behaves when invoked. A function's code may or may not be written in ECMAScript.</font>
+
+可以作为子程序调用的对象类型成员
+
+> 注：除了其属性外，函数还包含可执行代码和状态，这些决定了它被调用时的行为。函数的代码可以是也可以不是用ECMAScript编写的。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.35 built-in function 内置函数</font>
+<font style="color:rgb(17, 17, 17);">built-in object that is a function</font>
+
+<font style="background-color:rgb(233, 251, 233);">Note: Examples of built-in functions include </font>`parseInt`<font style="background-color:rgb(233, 251, 233);"> and </font>`Math.exp`<font style="background-color:rgb(233, 251, 233);">. A </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">host</font>](https://tc39.es/ecma262/#host)<font style="background-color:rgb(233, 251, 233);"> or implementation may provide additional built-in functions that are not described in this specification.</font>
+
+内置对象，即函数。
+
+> 注意：内置函数的例子包括 `parseInt` 和 `Math.exp`。宿主环境或实现可能提供本规范中未描述的其他内置函数。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.36 built-in constructor 内置构造函数</font>
+<font style="color:rgb(17, 17, 17);">built-in function that is a </font>[<font style="color:rgb(32, 108, 167);">constructor</font>](https://tc39.es/ecma262/#constructor)
+
+<font style="background-color:rgb(233, 251, 233);">Note: Examples of built-in </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructors</font>](https://tc39.es/ecma262/#constructor)<font style="background-color:rgb(233, 251, 233);"> include </font>`**<font style="background-color:rgb(233, 251, 233);">Object</font>**`<font style="background-color:rgb(233, 251, 233);"> and </font>`**<font style="background-color:rgb(233, 251, 233);">Function</font>**`<font style="background-color:rgb(233, 251, 233);">. A </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">host</font>](https://tc39.es/ecma262/#host)<font style="background-color:rgb(233, 251, 233);"> or implementation may provide additional built-in </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">constructors</font>](https://tc39.es/ecma262/#constructor)<font style="background-color:rgb(233, 251, 233);"> that are not described in this specification.</font>
+
+内置的构造函数
+
+> 注：内置构造函数的例子包括 Object 和 Function。宿主或实现可能提供本规范中未描述的其他内置构造函数。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.37 property 属性</font>
+<font style="color:rgb(17, 17, 17);">part of an object that associates a key (either a String value or a Symbol value) and a value</font>
+
+<font style="background-color:rgb(233, 251, 233);">Note: Depending upon the form of the property the value may be represented either directly as a data value (a primitive value, an object, or a </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">function object</font>](https://tc39.es/ecma262/#function-object)<font style="background-color:rgb(233, 251, 233);">) or indirectly by a pair of accessor functions.</font>
+
+对象的一部分，它将一个键（字符串值或符号值）与一个值关联起来。
+
+> 注：根据属性的形式，该值可以直接表示为数据值（原始值、对象或函数对象），也可以通过一对访问器函数间接表示。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.38 method</font>
+<font style="color:rgb(17, 17, 17);">function that is the value of a property</font>
+
+<font style="background-color:rgb(233, 251, 233);">Note：When a function is called as a method of an object, the object is passed to the function as its </font>**<font style="background-color:rgb(233, 251, 233);">this</font>**<font style="background-color:rgb(233, 251, 233);"> value.</font>
+
+函数作为属性的值
+
+> 注：当一个函数被作为对象的方法调用时，该对象会作为`this`值传递给这个函数。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.39 built-in method 内置方法</font>
+<font style="color:rgb(17, 17, 17);">method that is a built-in function</font>
+
+<font style="background-color:rgb(233, 251, 233);">Note: Standard built-in methods are defined in this specification. A </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">host</font>](https://tc39.es/ecma262/#host)<font style="background-color:rgb(233, 251, 233);"> or implementation may provide additional built-in methods that are not described in this specification.</font>
+
+方法即为内置函数
+
+> 注：标准的内置方法在此规范中定义。宿主或实现方可以提供本规范中未描述的额外内置方法。
+>
+
+#### <font style="color:rgb(17, 17, 17);">4.4.40 attribute 特性</font>
+<font style="color:rgb(17, 17, 17);">internal value that defines some characteristic of a property</font>
+
+内部值，用于定义属性的某个特征。
+
+#### <font style="color:rgb(17, 17, 17);">4.4.41 own property</font>
+<font style="color:rgb(17, 17, 17);">property that is directly contained by its object</font>
+
+直接由其对象包含的属性
+
+#### <font style="color:rgb(17, 17, 17);">4.4.42 inherited property</font>
+<font style="color:rgb(17, 17, 17);">property of an object that is not an own property but is a property (either own or inherited) of the object's prototype</font>
+
+对象的一个属性，这个属性不是对象自身的属性，而是对象原型（无论是自身拥有还是继承来的）的属性。
+
+
+
+### <font style="color:rgb(17, 17, 17);">4.5 本规范的组成 Organization of This Specification</font>
+<font style="color:rgb(17, 17, 17);">The remainder of this specification is organized as follows:</font>
+
+<font style="color:rgb(17, 17, 17);">Clause</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">5</font>](https://tc39.es/ecma262/#sec-notational-conventions)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">defines the notational conventions used throughout the specification.</font>
+
+<font style="color:rgb(17, 17, 17);">Clauses</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">6</font>](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">through</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">10</font>](https://tc39.es/ecma262/#sec-ordinary-and-exotic-objects-behaviours)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">define the execution environment within which ECMAScript programs operate.</font>
+
+<font style="color:rgb(17, 17, 17);">Clauses</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">11</font>](https://tc39.es/ecma262/#sec-ecmascript-language-source-code)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">through</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">17</font>](https://tc39.es/ecma262/#sec-error-handling-and-language-extensions)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">define the actual ECMAScript programming language including its syntactic encoding and the execution semantics of all language features.</font>
+
+<font style="color:rgb(17, 17, 17);">Clauses</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">18</font>](https://tc39.es/ecma262/#sec-ecmascript-standard-built-in-objects)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">through</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">28</font>](https://tc39.es/ecma262/#sec-reflection)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">define the ECMAScript standard library. They include the definitions of all of the standard objects that are available for use by ECMAScript programs as they execute.</font>
+
+<font style="color:rgb(17, 17, 17);">Clause </font>[<font style="color:rgb(32, 108, 167);">29</font>](https://tc39.es/ecma262/#sec-memory-model)<font style="color:rgb(17, 17, 17);"> describes the memory consistency model of accesses on SharedArrayBuffer-backed memory and methods of the Atomics object.</font><font style="color:rgb(17, 17, 17);"></font>
+
+本规范的其余部分组织如下：  
+第5条定义了整个规范中使用的标记约定。  
+**<font style="color:#DF2A3F;">第6至10条定义了ECMAScript程序运行的执行环境。  
+</font>****<font style="color:#DF2A3F;">第11至17条定义了实际的ECMAScript编程语言，包括其语法编码和所有语言特性的执行语义。  
+</font>****<font style="color:#DF2A3F;">第18至28条定义了ECMAScript标准库。它们包含了ECMAScript程序在执行过程中可用的所有标准对象的定义。</font>**  
+第29条描述了基于SharedArrayBuffer的内存访问的记忆一致性模型以及Atomics对象的方法。
+
+
+
+## 5 符号约定 Notational Conventions
+### <font style="color:rgb(17, 17, 17);">5.1 Syntactic and Lexical Grammars</font>
+#### <font style="color:rgb(17, 17, 17);">5.1.1 上下文无关文法 Context-Free Grammars </font>
+<font style="color:rgb(17, 17, 17);">A </font>_<font style="color:rgb(17, 17, 17);">context-free grammar</font>_<font style="color:rgb(17, 17, 17);"> consists of a number of </font>_<font style="color:rgb(17, 17, 17);">productions</font>_<font style="color:rgb(17, 17, 17);">. Each production has an abstract symbol called a </font>_<font style="color:rgb(17, 17, 17);">nonterminal</font>_<font style="color:rgb(17, 17, 17);"> as its </font>_<font style="color:rgb(17, 17, 17);">left-hand side</font>_<font style="color:rgb(17, 17, 17);">, and a sequence of zero or more nonterminal and </font>_<font style="color:rgb(17, 17, 17);">terminal</font>_<font style="color:rgb(17, 17, 17);"> symbols as its </font>_<font style="color:rgb(17, 17, 17);">right-hand side</font>_<font style="color:rgb(17, 17, 17);">. For each grammar, the terminal symbols are drawn from a specified alphabet.</font>
+
+上下文无关文法由多个产生式组成。每个产生式左边是一个称为非终结符的抽象符号，右边是由零个或多个非终结符和终结符组成的序列。对于每种文法，其终结符都来自一个指定的字母表。
+
+
+
+<font style="color:rgb(17, 17, 17);">A</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">chain production</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">is a production that has exactly one nonterminal symbol on its right-hand side along with zero or more terminal symbols.</font>
+
+链式产生式是指在其右侧仅有一个非终结符号以及零个或多个终结符号的产生式。
+
+
+
+<font style="color:rgb(17, 17, 17);">Starting from a sentence consisting of a single distinguished nonterminal, called the goal symbol, a given context-free grammar specifies a </font>_<font style="color:rgb(17, 17, 17);">language</font>_<font style="color:rgb(17, 17, 17);">, namely, the (perhaps infinite) set of possible sequences of terminal symbols that can result from repeatedly replacing any nonterminal in the sequence with a right-hand side of a production for which the nonterminal is the left-hand side.</font>
+
+从一个仅包含一个特定非终结符（称为目标符号）的句子开始，给定的上下文无关文法定义了一种语言，即通过反复将序列中的任何非终结符替换为该非终结符作为左部的产生式的右部所能得到的所有可能的终结符序列的集合（这个集合可能是无限的）。
+
+
+
+#### <font style="color:rgb(17, 17, 17);">5.1.2 词法文法和正则表达式语法 The Lexical and RegExp Grammars </font>
+<font style="color:rgb(17, 17, 17);">A </font>_<font style="color:rgb(17, 17, 17);">lexical grammar</font>_<font style="color:rgb(17, 17, 17);"> for ECMAScript is given in clause </font>[<font style="color:rgb(32, 108, 167);">12</font>](https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar)<font style="color:rgb(17, 17, 17);">. This grammar has as its terminal symbols Unicode code points that conform to the rules for </font>[_<font style="color:rgb(51, 51, 51);">SourceCharacter</font>_](https://tc39.es/ecma262/#prod-SourceCharacter)<font style="color:rgb(17, 17, 17);"> defined in </font>[<font style="color:rgb(32, 108, 167);">11.1</font>](https://tc39.es/ecma262/#sec-source-text)<font style="color:rgb(17, 17, 17);">. It defines a set of productions, starting from the </font>[<font style="color:rgb(32, 108, 167);">goal symbol</font>](https://tc39.es/ecma262/#sec-context-free-grammars)<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">InputElementDiv</font>_](https://tc39.es/ecma262/#prod-InputElementDiv)<font style="color:rgb(17, 17, 17);">, </font>[_<font style="color:rgb(51, 51, 51);">InputElementTemplateTail</font>_](https://tc39.es/ecma262/#prod-InputElementTemplateTail)<font style="color:rgb(17, 17, 17);">, </font>[_<font style="color:rgb(51, 51, 51);">InputElementRegExp</font>_](https://tc39.es/ecma262/#prod-InputElementRegExp)<font style="color:rgb(17, 17, 17);">, </font>[_<font style="color:rgb(51, 51, 51);">InputElementRegExpOrTemplateTail</font>_](https://tc39.es/ecma262/#prod-InputElementRegExpOrTemplateTail)<font style="color:rgb(17, 17, 17);">, or </font>[_<font style="color:rgb(51, 51, 51);">InputElementHashbangOrRegExp</font>_](https://tc39.es/ecma262/#prod-InputElementHashbangOrRegExp)<font style="color:rgb(17, 17, 17);">, that describe how sequences of such code points are translated into a sequence of input elements.</font>
+
+ECMAScript的词法文法在第12条中给出。该文法的终结符号是符合11.1节中定义的SourceCharacter规则的Unicode码点。它定义了一组产生式，从目标符号InputElementDiv、InputElementTemplateTail、InputElementRegExp、InputElementRegExpOrTemplateTail或InputElementHashbangOrRegExp开始，描述了这些码点序列是如何被转换成输入元素序列的。
+
+
+
+<font style="color:rgb(17, 17, 17);">Input elements other than white space and comments form the terminal symbols for the syntactic grammar for ECMAScript and are called ECMAScript </font>_<font style="color:rgb(17, 17, 17);">tokens</font>_<font style="color:rgb(17, 17, 17);">. These tokens are the </font>[<font style="color:rgb(32, 108, 167);">reserved words</font>](https://tc39.es/ecma262/#sec-keywords-and-reserved-words)<font style="color:rgb(17, 17, 17);">, identifiers, literals, and punctuators of the ECMAScript language. Moreover, line terminators, although not considered to be tokens, also become part of the stream of input elements and guide the process of automatic semicolon insertion (</font>[<font style="color:rgb(32, 108, 167);">12.10</font>](https://tc39.es/ecma262/#sec-automatic-semicolon-insertion)<font style="color:rgb(17, 17, 17);">). Simple white space and single-line comments are discarded and do not appear in the stream of input elements for the syntactic grammar. A </font>[_<font style="color:rgb(51, 51, 51);">MultiLineComment</font>_](https://tc39.es/ecma262/#prod-MultiLineComment)<font style="color:rgb(17, 17, 17);"> (that is, a comment of the form </font>`**/***`<font style="color:rgb(17, 17, 17);">…</font>`***/**`**<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">regardless of whether it spans more than one line) is likewise simply discarded if it contains no line terminator; but if a </font>[_<font style="color:rgb(51, 51, 51);">MultiLineComment</font>_](https://tc39.es/ecma262/#prod-MultiLineComment)<font style="color:rgb(17, 17, 17);"> contains one or more line terminators, then it is replaced by a single line terminator, which becomes part of the stream of input elements for the syntactic grammar.</font>
+
+除了空白字符和注释之外的输入元素构成了ECMAScript语法的终结符，并被称为ECMAScript标记。这些标记是ECMAScript语言中的保留字、标识符、字面量和标点符号。此外，尽管行终止符不被视为标记，但它们也成为了输入元素流的一部分，并指导自动分号插入的过程（12.10）。简单的空白字符和单行注释将被丢弃，不会出现在语法分析的输入元素流中。多行注释（即形式为/_…_/的注释，无论它是否跨越多行）如果其中不包含行终止符，则同样会被简单地丢弃；但如果一个多行注释包含一个或多个行终止符，则该注释会被替换为一个单独的行终止符，这个行终止符将成为语法分析输入元素流的一部分。
+
+
+
+<font style="color:rgb(17, 17, 17);">A</font><font style="color:rgb(17, 17, 17);"> </font>_<font style="color:rgb(17, 17, 17);">RegExp grammar</font>_<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">for ECMAScript is given in</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">22.2.1</font>](https://tc39.es/ecma262/#sec-patterns)<font style="color:rgb(17, 17, 17);">. This grammar also has as its terminal symbols the code points as defined by</font><font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">SourceCharacter</font>_](https://tc39.es/ecma262/#prod-SourceCharacter)<font style="color:rgb(17, 17, 17);">. It defines a set of productions, starting from the</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">goal symbol</font>](https://tc39.es/ecma262/#sec-context-free-grammars)<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">Pattern</font>_](https://tc39.es/ecma262/#prod-Pattern)<font style="color:rgb(17, 17, 17);">, that describe how sequences of code points are translated into regular expression patterns.</font>
+
+<font style="color:rgb(17, 17, 17);">Productions of the lexical and RegExp grammars are distinguished by having two colons “</font>**<font style="color:rgb(17, 17, 17);">::</font>**<font style="color:rgb(17, 17, 17);">” as separating punctuation. The lexical and RegExp grammars share some productions.</font>
+
+ECMAScript 的正则表达式语法在 22.2.1 节中给出。该语法的终结符是 SourceCharacter 定义的代码点。它定义了一组以目标符号 Pattern 开始的产生式，描述了代码点序列如何被转换成正则表达式模式。  
+词法和正则表达式语法的产生式通过使用两个冒号“::”作为分隔标点来加以区分。词法和正则表达式语法共享一些产生式。
+
+#### <font style="color:rgb(17, 17, 17);">5.1.3 数值字符串语法 The Numeric String Grammar </font>
+<font style="color:rgb(17, 17, 17);">A </font>_<font style="color:rgb(17, 17, 17);">numeric string grammar</font>_<font style="color:rgb(17, 17, 17);"> appears in </font>[<font style="color:rgb(32, 108, 167);">7.1.4.1</font>](https://tc39.es/ecma262/#sec-tonumber-applied-to-the-string-type)<font style="color:rgb(17, 17, 17);">. It has as its terminal symbols </font>[_<font style="color:rgb(51, 51, 51);">SourceCharacter</font>_](https://tc39.es/ecma262/#prod-SourceCharacter)<font style="color:rgb(17, 17, 17);">, and is used for translating Strings into numeric values starting from the </font>[<font style="color:rgb(32, 108, 167);">goal symbol</font>](https://tc39.es/ecma262/#sec-context-free-grammars)<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">StringNumericLiteral</font>_](https://tc39.es/ecma262/#prod-StringNumericLiteral)<font style="color:rgb(17, 17, 17);"> (which is similar to but distinct from the </font>[<font style="color:rgb(32, 108, 167);">lexical grammar for numeric literals</font>](https://tc39.es/ecma262/#sec-literals-numeric-literals)<font style="color:rgb(17, 17, 17);">).</font>
+
+<font style="color:rgb(17, 17, 17);">Productions of the numeric string grammar are distinguished by having three colons “</font>**<font style="color:rgb(17, 17, 17);">:::</font>**<font style="color:rgb(17, 17, 17);">” as punctuation, and are never used for parsing source text.</font>
+
+数值字符串语法出现在7.1.4.1节中。它的终结符是SourceCharacter，用于将字符串从目标符号StringNumericLiteral开始转换为数值（这与数值字面量的词法语法相似但不同）。  
+数值字符串语法的产生式通过使用三个冒号“:::”作为标点来区分，并且从不用于解析源文本。
+
+#### <font style="color:rgb(17, 17, 17);">5.1.4  句法语法 The Syntactic Grammar</font>
+<font style="color:rgb(17, 17, 17);">The </font>_<font style="color:rgb(17, 17, 17);">syntactic grammar</font>_<font style="color:rgb(17, 17, 17);"> for ECMAScript is given in clauses </font>[<font style="color:rgb(32, 108, 167);">13</font>](https://tc39.es/ecma262/#sec-ecmascript-language-expressions)<font style="color:rgb(17, 17, 17);"> through </font>[<font style="color:rgb(32, 108, 167);">16</font>](https://tc39.es/ecma262/#sec-ecmascript-language-scripts-and-modules)<font style="color:rgb(17, 17, 17);">. This grammar has ECMAScript tokens defined by the lexical grammar as its terminal symbols (</font>[<font style="color:rgb(32, 108, 167);">5.1.2</font>](https://tc39.es/ecma262/#sec-lexical-and-regexp-grammars)<font style="color:rgb(17, 17, 17);">). It defines a set of productions, starting from two alternative </font>[<font style="color:rgb(32, 108, 167);">goal symbols</font>](https://tc39.es/ecma262/#sec-context-free-grammars)<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">Script</font>_](https://tc39.es/ecma262/#prod-Script)<font style="color:rgb(17, 17, 17);"> and </font>[_<font style="color:rgb(51, 51, 51);">Module</font>_](https://tc39.es/ecma262/#prod-Module)<font style="color:rgb(17, 17, 17);">, that describe how sequences of tokens form syntactically correct independent components of ECMAScript programs.</font>
+
+<font style="color:rgb(17, 17, 17);">When a stream of code points is to be parsed as an ECMAScript</font><font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">Script</font>_](https://tc39.es/ecma262/#prod-Script)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">or</font><font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">Module</font>_](https://tc39.es/ecma262/#prod-Module)<font style="color:rgb(17, 17, 17);">, it is first converted to a stream of input elements by repeated application of the lexical grammar; this stream of input elements is then parsed by a single application of the syntactic grammar. The input stream is syntactically in error if the tokens in the stream of input elements cannot be parsed as a single instance of the goal nonterminal (</font>[_<font style="color:rgb(51, 51, 51);">Script</font>_](https://tc39.es/ecma262/#prod-Script)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">or</font><font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">Module</font>_](https://tc39.es/ecma262/#prod-Module)<font style="color:rgb(17, 17, 17);">), with no tokens left over.</font>
+
+ECMAScript的句法语法在第13至16条中给出。该语法将由词法语法定义的ECMAScript记号作为其终结符号（5.1.2）。它定义了一组产生式，从两个可选的目标符号Script和Module开始，描述了这些记号序列如何构成ECMAScript程序中语法正确的独立组件。  
+当一串代码点需要被解析为ECMAScript Script或Module时，首先通过反复应用词法语法将其转换为输入元素流；然后这个输入元素流通过一次句法语法的应用被解析。如果输入元素流中的记号不能作为一个单独的目标非终结符（Script或Module）实例被解析，并且没有剩余的记号，则认为输入流在句法上是错误的。
+
+
+
+<font style="color:rgb(17, 17, 17);">When a parse is successful, it constructs a</font><font style="color:rgb(17, 17, 17);"> </font>_<font style="color:rgb(17, 17, 17);">parse tree</font>_<font style="color:rgb(17, 17, 17);">, a rooted tree structure in which each node is a</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">Parse Node</font><font style="color:rgb(17, 17, 17);">. Each Parse Node is an</font><font style="color:rgb(17, 17, 17);"> </font>_<font style="color:rgb(17, 17, 17);">instance</font>_<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">of a symbol in the grammar; it represents a span of the source text that can be derived from that symbol. The root node of the parse tree, representing the whole of the source text, is an instance of the parse's</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">goal symbol</font>](https://tc39.es/ecma262/#sec-context-free-grammars)<font style="color:rgb(17, 17, 17);">. When a Parse Node is an instance of a nonterminal, it is also an instance of some production that has that nonterminal as its left-hand side. Moreover, it has zero or more</font><font style="color:rgb(17, 17, 17);"> </font>_<font style="color:rgb(17, 17, 17);">children</font>_<font style="color:rgb(17, 17, 17);">, one for each symbol on the production's right-hand side: each child is a Parse Node that is an instance of the corresponding symbol.</font>
+
+<font style="color:rgb(17, 17, 17);">New Parse Nodes are instantiated for each invocation of the parser and never reused between parses even of identical source text. Parse Nodes are considered the same Parse Node if and only if they represent the same span of source text, are instances of the same grammar symbol, and resulted from the same parser invocation.</font>
+
+当解析成功时，它会构建一个解析树，这是一个有根的树结构，其中每个节点都是一个解析节点。每个解析节点是语法中某个符号的一个实例；它代表可以从该符号派生出的源文本的一部分。解析树的根节点代表整个源文本，是解析的目标符号的一个实例。当一个解析节点是非终结符的实例时，它也是某个以该非终结符为左侧符号的产生式的实例。此外，它有零个或多个子节点，对应于产生式右侧的每个符号：每个子节点都是相应符号的一个解析节点。  
+每次调用解析器时都会为新创建的解析节点实例化，并且即使是对相同的源文本进行解析，这些节点也不会在不同的解析之间重用。只有当解析节点表示相同的源文本部分、是相同语法符号的实例并且来自同一解析器调用时，才认为它们是同一个解析节点。
+
+
+
+<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note 1：Parsing the same String multiple times will lead to different Parse Nodes. For example, consider: Each call to </font>`eval`<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);"> converts the value of </font>`str`<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);"> into </font>[<font style="color:rgb(32, 108, 167);background-color:rgb(233, 251, 233);">ECMAScript source text</font>](https://tc39.es/ecma262/#sec-source-text)<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);"> and performs an independent parse that creates its own separate tree of Parse Nodes. The trees are distinct even though each parse operates upon a source text that was derived from the same String value.</font>
+
+> 注1：多次解析同一个字符串将会导致生成不同的解析节点。例如，请考虑以下情况：
+>
+> 每次调用 `eval` 都会将字符串 `str` 的值转换为 ECMAScript 源文本，并执行独立的解析以创建自己的解析节点树。即使每个解析操作基于的源文本都源自同一个字符串值，这些解析树也是不同的。
+>
+
+```plain
+let str = "1 + 1;";
+eval(str);
+eval(str);
+```
+
+<font style="color:rgb(17, 17, 17);background-color:rgb(233, 251, 233);">Note 2：Parse Nodes are specification artefacts, and implementations are not required to use an analogous data structure.</font>
+
+> 注2：解析节点只是规范中的概念性产物，实现并不需要使用类似的数据结构。
+>
+
+
+
+<font style="color:rgb(17, 17, 17);">Productions of the syntactic grammar are distinguished by having just one colon “</font>**<font style="color:rgb(17, 17, 17);">:</font>**<font style="color:rgb(17, 17, 17);">” as punctuation.</font>
+
+<font style="color:rgb(17, 17, 17);">The syntactic grammar as presented in clauses </font>[<font style="color:rgb(32, 108, 167);">13</font>](https://tc39.es/ecma262/#sec-ecmascript-language-expressions)<font style="color:rgb(17, 17, 17);"> through </font>[<font style="color:rgb(32, 108, 167);">16</font>](https://tc39.es/ecma262/#sec-ecmascript-language-scripts-and-modules)<font style="color:rgb(17, 17, 17);"> is not a complete account of which token sequences are accepted as a correct ECMAScript </font>[_<font style="color:rgb(51, 51, 51);">Script</font>_](https://tc39.es/ecma262/#prod-Script)<font style="color:rgb(17, 17, 17);"> or </font>[_<font style="color:rgb(51, 51, 51);">Module</font>_](https://tc39.es/ecma262/#prod-Module)<font style="color:rgb(17, 17, 17);">. Certain additional token sequences are also accepted, namely, those that would be described by the grammar if only semicolons were added to the sequence in certain places (such as before line terminator characters). Furthermore, certain token sequences that are described by the grammar are not considered acceptable if a line terminator character appears in certain “awkward”places.</font>
+
+<font style="color:rgb(17, 17, 17);">In certain cases, in order to avoid ambiguities, the syntactic grammar uses generalized productions that permit token sequences that do not form a valid ECMAScript</font><font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">Script</font>_](https://tc39.es/ecma262/#prod-Script)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">or</font><font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">Module</font>_](https://tc39.es/ecma262/#prod-Module)<font style="color:rgb(17, 17, 17);">. For example, this technique is used for object literals and object destructuring patterns. In such cases a more restrictive</font><font style="color:rgb(17, 17, 17);"> </font>_<font style="color:rgb(17, 17, 17);">supplemental grammar</font>_<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">is provided that further restricts the acceptable token sequences. Typically, an</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">early error</font>](https://tc39.es/ecma262/#early-error)<font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">rule will then state that, in certain contexts, "</font><font style="color:rgb(33, 131, 121);">P</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">must cover</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">an</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">N</font><font style="color:rgb(17, 17, 17);">", where</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">P</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">is a Parse Node (an instance of the generalized production) and</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">N</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">is a nonterminal from the supplemental grammar. This means:</font>
+
+1. <font style="color:rgb(17, 17, 17);">The sequence of tokens originally matched by</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">P</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">is parsed again using</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">N</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">as the</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">goal symbol</font>](https://tc39.es/ecma262/#sec-context-free-grammars)<font style="color:rgb(17, 17, 17);">. If</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">N</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">takes grammatical parameters, then they are set to the same values used when</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">P</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">was originally parsed.</font>
+2. <font style="color:rgb(17, 17, 17);">If the sequence of tokens can be parsed as a single instance of</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">N</font><font style="color:rgb(17, 17, 17);">, with no tokens left over, then:</font>
+    1. <font style="color:rgb(17, 17, 17);">We refer to that instance of</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">N</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">(a Parse Node, unique for a given</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">P</font><font style="color:rgb(17, 17, 17);">) as "the</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">N</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">that is</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">covered</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">by</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">P</font><font style="color:rgb(17, 17, 17);">".</font>
+    2. <font style="color:rgb(17, 17, 17);">All Early Error rules for</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">N</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">and its derived productions also apply to the</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">N</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(17, 17, 17);">that is covered by</font><font style="color:rgb(17, 17, 17);"> </font><font style="color:rgb(33, 131, 121);">P</font><font style="color:rgb(17, 17, 17);">.</font>
+3. <font style="color:rgb(17, 17, 17);">Otherwise (if the parse fails), it is an early Syntax Error.</font>
+
+句法语法的产生式通过只有一个冒号“:”作为标点来区分。  
+在第13至16条中呈现的句法语法并不是对哪些标记序列可以被接受为正确的ECMAScript脚本或模块的完整描述。某些额外的标记序列也被接受，即那些如果在某些位置（例如行终止符之前）添加分号后能符合语法要求的序列。此外，如果行终止符出现在某些“尴尬”的位置，即使这些标记序列符合语法要求，也不会被认为是可接受的。  
+在某些情况下，为了避免歧义，句法语法使用了泛化的产生式，允许一些不构成有效ECMAScript脚本或模块的标记序列。例如，这种技术用于对象字面量和对象解构模式。在这种情况下，会提供一个更为严格的补充语法来进一步限制可接受的标记序列。通常，一条早期错误规则将声明，在某些上下文中，“P必须覆盖N”，其中P是解析节点（泛化产生式的实例），而N是补充语法中的非终结符。这意味着：
+
+1. 由P最初匹配的标记序列将再次以N为目标符号进行解析。如果N需要语法参数，则这些参数设置为与P最初解析时相同的值。
+2. 如果该标记序列能够被解析为单个N实例，并且没有剩余的标记，则：  
+a. 我们称那个N实例（对于给定的P是唯一的解析节点）为“被P覆盖的N”。  
+b. N及其派生产生式的所有早期错误规则也适用于被P覆盖的N。
+3. 否则（如果解析失败），则是一个早期语法错误。
+
+#### 5.1.5 <font style="color:rgb(17, 17, 17);">Grammar Notation</font>
+##### <font style="color:rgb(17, 17, 17);">5.1.5.1 Terminal Symbols</font>
+<font style="color:rgb(17, 17, 17);">In the ECMAScript grammars, some terminal symbols are shown in </font>`**fixed-width**`<font style="color:rgb(17, 17, 17);"> font. These are to appear in a source text exactly as written. All terminal symbol code points specified in this way are to be understood as the appropriate Unicode code points from the Basic Latin block, as opposed to any similar-looking code points from other Unicode ranges. A code point in a terminal symbol cannot be expressed by a </font>`**\**`<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">UnicodeEscapeSequence</font>_](https://tc39.es/ecma262/#prod-UnicodeEscapeSequence)<font style="color:rgb(17, 17, 17);">.</font>
+
+<font style="color:rgb(17, 17, 17);">In grammars whose terminal symbols are individual Unicode code points (i.e., the lexical, RegExp, and numeric string grammars), a contiguous run of multiple fixed-width code points appearing in a production is a simple shorthand for the same sequence of code points, written as standalone terminal symbols.</font>
+
+在ECMAScript的语法中，一些终结符号以等宽字体显示。这些符号应完全按照所写的形式出现在源文本中。所有以这种方式指定的终结符号代码点都应理解为来自基本拉丁文区（Basic Latin block）的适当Unicode代码点，而不是来自其他Unicode范围内的任何外观相似的代码点。终结符号中的一个代码点不能通过\ Unicode转义序列来表示。  
+在那些终结符号是个别Unicode代码点（即词法、正则表达式和数值字符串语法）的语法中，在产生式中连续出现的多个等宽代码点是一个简单的简写形式，代表同样的代码点序列，这些代码点作为独立的终结符号书写。
+
+
+
+<font style="color:rgb(17, 17, 17);">For example, the production:</font>
+
+[_<font style="color:rgb(51, 51, 51);">HexIntegerLiteral</font>_](https://tc39.es/ecma262/#prod-grammar-notation-HexIntegerLiteral)<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">::</font>**<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">0x</font>**<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">HexDigits</font>_](https://tc39.es/ecma262/#prod-HexDigits)
+
+<font style="color:rgb(17, 17, 17);">is a shorthand for:</font>
+
+[_<font style="color:rgb(51, 51, 51);">HexIntegerLiteral</font>_](https://tc39.es/ecma262/#prod-grammar-notation-HexIntegerLiteral)<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">::</font>**<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">0</font>**<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">x</font>**<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">HexDigits</font>_](https://tc39.es/ecma262/#prod-HexDigits)
 
 <font style="color:rgb(17, 17, 17);"></font>
 
+<font style="color:rgb(17, 17, 17);">In contrast, in the syntactic grammar, a contiguous run of fixed-width code points is a single terminal symbol.</font>
+
+<font style="color:rgb(17, 17, 17);">Terminal symbols come in two other forms:</font>
+
++ <font style="color:rgb(17, 17, 17);">In the lexical and RegExp grammars, Unicode code points without a conventional printed representation are instead shown in the form "<ABBREV>" where "ABBREV" is a mnemonic for the code point or set of code points. These forms are defined in</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">Unicode Format-Control Characters</font>](https://tc39.es/ecma262/#sec-unicode-format-control-characters)<font style="color:rgb(17, 17, 17);">,</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">White Space</font>](https://tc39.es/ecma262/#sec-white-space)<font style="color:rgb(17, 17, 17);">, and</font><font style="color:rgb(17, 17, 17);"> </font>[<font style="color:rgb(32, 108, 167);">Line Terminators</font>](https://tc39.es/ecma262/#sec-line-terminators)<font style="color:rgb(17, 17, 17);">.</font>
++ <font style="color:rgb(17, 17, 17);">In the syntactic grammar, certain terminal symbols (e.g. </font>[_<font style="color:rgb(51, 51, 51);">IdentifierName</font>_](https://tc39.es/ecma262/#prod-IdentifierName)<font style="color:rgb(17, 17, 17);"> and </font>[_<font style="color:rgb(51, 51, 51);">RegularExpressionLiteral</font>_](https://tc39.es/ecma262/#prod-RegularExpressionLiteral)<font style="color:rgb(17, 17, 17);">) are shown in italics, as they refer to the nonterminals of the same name in the lexical grammar.</font>
+
+相比之下，在句法语法中，连续的固定宽度代码点被视为一个单一的终结符。  
+终结符还有另外两种形式：
+
++ 在词法和正则表达式语法中，没有传统打印表示的Unicode代码点以"<缩写>"的形式显示，其中"缩写"是该代码点或一组代码点的记忆助词。这些形式在Unicode格式控制字符、空白字符和行终止符中有定义。
++ 在句法语法中，某些终结符（例如IdentifierName和RegularExpressionLiteral）以斜体显示，因为它们指的是词法语法中同名的非终结符。
+
+
+
+##### 5.1.5.2 <font style="color:rgb(17, 17, 17);">Nonterminal Symbols and Productions</font>
+<font style="color:rgb(17, 17, 17);">Nonterminal symbols are shown in </font>_<font style="color:rgb(17, 17, 17);">italic</font>_<font style="color:rgb(17, 17, 17);"> type. The definition of a nonterminal (also called a “production”) is introduced by the name of the nonterminal being defined followed by one or more colons. (The number of colons indicates to which grammar the production belongs.) One or more alternative right-hand sides for the nonterminal then follow on succeeding lines. For example, the syntactic definition:</font>
+
+非终结符号以斜体显示。非终结符的定义（也称为“产生式”）由被定义的非终结符名称后跟一个或多个冒号引入。（冒号的数量表示该产生式属于哪个文法。）随后，在接下来的行中给出该非终结符的一个或多个可选的右部。例如，语法定义如下： 
+
+
+
+[_<font style="color:rgb(51, 51, 51);">WhileStatement</font>_](https://tc39.es/ecma262/#prod-grammar-notation-WhileStatement)<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">:</font>**
+
+**<font style="color:rgb(17, 17, 17);">while</font>**<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">(</font>**<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">Expression</font>_](https://tc39.es/ecma262/#prod-Expression)<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">)</font>**<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">Statement</font>_](https://tc39.es/ecma262/#prod-Statement)
+
+
+
+<font style="color:rgb(17, 17, 17);">states that the nonterminal </font>[_<font style="color:rgb(51, 51, 51);">WhileStatement</font>_](https://tc39.es/ecma262/#prod-grammar-notation-WhileStatement)<font style="color:rgb(17, 17, 17);"> represents the token </font>`**while**`<font style="color:rgb(17, 17, 17);">, followed by a left parenthesis token, followed by an </font>[_<font style="color:rgb(51, 51, 51);">Expression</font>_](https://tc39.es/ecma262/#prod-Expression)<font style="color:rgb(17, 17, 17);">, followed by a right parenthesis token, followed by a </font>[_<font style="color:rgb(51, 51, 51);">Statement</font>_](https://tc39.es/ecma262/#prod-Statement)<font style="color:rgb(17, 17, 17);">. The occurrences of </font>[_<font style="color:rgb(51, 51, 51);">Expression</font>_](https://tc39.es/ecma262/#prod-Expression)<font style="color:rgb(17, 17, 17);"> and </font>[_<font style="color:rgb(51, 51, 51);">Statement</font>_](https://tc39.es/ecma262/#prod-Statement)<font style="color:rgb(17, 17, 17);"> are themselves nonterminals. As another example, the syntactic definition:</font>
+
+说明非终结符 WhileStatement 代表的是 token `while`，后面跟着一个左括号 token，接着是一个 Expression（表达式），然后是一个右括号 token，最后是一个 Statement（语句）。这里的 Expression 和 Statement 本身也是非终结符。再举一个例子，语法定义： 
+
+
+
+[_<font style="color:rgb(51, 51, 51);">ArgumentList</font>_](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList)<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">:</font>**
+
+_<font style="color:rgb(51, 51, 51);">       </font>_[_<font style="color:rgb(51, 51, 51);">AssignmentExpression</font>_](https://tc39.es/ecma262/#prod-AssignmentExpression)
+
+[_<font style="color:rgb(51, 51, 51);">ArgumentList</font>_](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList)<font style="color:rgb(17, 17, 17);"> </font>**<font style="color:rgb(17, 17, 17);">,</font>**<font style="color:rgb(17, 17, 17);"> </font>[_<font style="color:rgb(51, 51, 51);">AssignmentExpression</font>_](https://tc39.es/ecma262/#prod-AssignmentExpression)
+
+
+
+<font style="color:rgb(17, 17, 17);">states that an </font>[_<font style="color:rgb(51, 51, 51);">ArgumentList</font>_](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList)<font style="color:rgb(17, 17, 17);"> may represent either a single </font>[_<font style="color:rgb(51, 51, 51);">AssignmentExpression</font>_](https://tc39.es/ecma262/#prod-AssignmentExpression)<font style="color:rgb(17, 17, 17);"> or an </font>[_<font style="color:rgb(51, 51, 51);">ArgumentList</font>_](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList)<font style="color:rgb(17, 17, 17);">, followed by a comma, followed by an </font>[_<font style="color:rgb(51, 51, 51);">AssignmentExpression</font>_](https://tc39.es/ecma262/#prod-AssignmentExpression)<font style="color:rgb(17, 17, 17);">. This definition of </font>[_<font style="color:rgb(51, 51, 51);">ArgumentList</font>_](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList)<font style="color:rgb(17, 17, 17);"> is recursive, that is, it is defined in terms of itself. The result is that an </font>[_<font style="color:rgb(51, 51, 51);">ArgumentList</font>_](https://tc39.es/ecma262/#prod-grammar-notation-ArgumentList)<font style="color:rgb(17, 17, 17);"> may contain any positive number of arguments, separated by commas, where each argument expression is an </font>[_<font style="color:rgb(51, 51, 51);">AssignmentExpression</font>_](https://tc39.es/ecma262/#prod-AssignmentExpression)<font style="color:rgb(17, 17, 17);">. Such recursive definitions of nonterminals are common.  
+</font><font style="color:rgb(17, 17, 17);">说明 ArgumentList 可以表示单个 AssignmentExpression，或者是一个 ArgumentList 后跟一个逗号再后跟一个 AssignmentExpression。这种对 ArgumentList 的定义是递归的，也就是说，它是用自身来定义的。结果就是 ArgumentList 可以包含任意正数个参数，这些参数由逗号分隔，并且每个参数表达式都是一个 AssignmentExpression。这种非终结符的递归定义是很常见的。  
+</font>
